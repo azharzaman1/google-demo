@@ -1,12 +1,24 @@
 import React from "react";
 import "./index.css";
+import HomePage from "./pages/HomePage";
+import SearchPage from "./pages/SearchPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const RootApp = () => {
+const App = () => {
   return (
     <div className="App__main__container">
-      <h1> Lets build Google Clone with Clever Programmers</h1>
+      <Router>
+        <Switch>
+          <Route path="/search">
+            <SearchPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 };
 
-export default RootApp;
+export default App;

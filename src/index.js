@@ -1,10 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import RootApp from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import RootApp from "./App";
+import reducer, { initialState } from "./files/reducer";
+import { StateProvider } from "./files/StateProvider";
+import * as serviceWorker from "./serviceWorker";
 
-let RootDirectory = document.getElementById('Root')
+let RootDirectory = document.getElementById("Root");
 
-ReactDOM.render(<RootApp />, RootDirectory);
+ReactDOM.render(
+  <React.StrictMode>
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <RootApp />
+    </StateProvider>
+  </React.StrictMode>,
+  RootDirectory
+);
 
 serviceWorker.register();

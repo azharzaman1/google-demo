@@ -23,7 +23,10 @@ const HomePage = () => {
       </div>
       <div className="homePage__body">
         <img src={Logo} />
-        <SearchComponent searchInput__classBased__on__Location="homePage__header__searchBar" />
+        <SearchComponent
+          searchInput__classBased__on__Location="homePage__header__searchBar"
+          isHomePage__bar
+        />
       </div>
     </div>
   );

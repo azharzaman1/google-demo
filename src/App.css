@@ -48,7 +48,7 @@
           justify-content: space-between;
 }
 
-.homePage__headerRight > .appsIcon {
+.appsIcon {
   margin-right: 15px;
   color: rgba(0, 0, 0, 0.6);
   font-size: 23px;
@@ -56,7 +56,7 @@
   transition: color 0.2s;
 }
 
-.homePage__headerRight > .appsIcon:hover {
+.appsIcon:hover {
   color: #262626;
 }
 
@@ -115,7 +115,7 @@
   padding: 10px 13px;
 }
 
-.search__input > .input__Icon {
+.input__Icon {
   color: #9aa0a6;
   margin: -0.1rem;
   font-size: 19.75px;
@@ -169,7 +169,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 22px 15px 10px 15px;
+  padding: 22px 15px 0px 15px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -178,7 +178,7 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .searchPage__headerTop {
@@ -216,19 +216,20 @@
 }
 
 .searchPage__headerLower .lowerHeader__left {
-  margin-left: 205px;
+  margin-left: 150px;
 }
 
 .searchPage__headerLower .lowerHeader__right {
-  margin-left: 83.5px;
+  margin-left: 92.5px;
 }
 
 .google__searchPage__logo {
-  height: 48.5px;
-  margin-right: 50px;
+  height: 31px;
+  margin-right: 43.25px;
   margin-left: 10px;
   -o-object-fit: contain;
      object-fit: contain;
+  margin-top: 7px;
 }
 
 .searchPage__header__searchBar {
@@ -240,12 +241,13 @@
           align-items: center;
   border: 1px solid rgba(211, 211, 211, 0.966);
   height: 30px;
-  padding: 20px 20px;
+  padding: 21.5px 20px;
   width: 75vw;
+  z-index: 101;
   margin: 0 auto;
   border-radius: 999px;
-  max-width: 575px;
-  margin-top: 0.125rem;
+  max-width: 600px;
+  margin-top: -2px;
 }
 
 .searchPage__header__searchBar:hover {
@@ -257,15 +259,41 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: medium;
+  font-size: 16px;
   border: none;
   padding: 10px 5px;
+  letter-spacing: normal;
+  z-index: 500;
 }
 
 .hide__searchIcon {
   opacity: 0;
   font-size: 8px;
   color: white;
+}
+
+.searchPage__headerTop__thirdSec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 45.1rem;
+  margin-top: -1.8rem;
+}
+
+.searchPage__headerTop__thirdSec .searchBar__appsIcon {
+  margin-right: 20px;
+}
+
+.searchPage__headerTop__thirdSec .avatar {
+  width: 32px;
+  height: 32px;
 }
 
 .searchPage__headerOption {
@@ -277,7 +305,8 @@
           align-items: center;
   color: gray;
   margin-right: 25px;
-  font-size: 13px;
+  font-size: 13.75px;
+  padding-bottom: 13px;
 }
 
 .searchPage__headerOption a {
@@ -286,7 +315,75 @@
 
 .searchPage__headerOption .option__Icon {
   font-size: 17px;
-  margin-right: 4.5px;
+  margin-right: 4px;
+}
+
+.firstOption {
+  padding-bottom: 8.75px;
+  border-bottom: 3px solid #1a73e8;
+  padding-right: 5px;
+  padding-left: 2px;
+}
+
+.extra__searchIcon {
+  margin-left: 2px solid #b1b0b0;
+  margin-left: 12px;
+  margin-top: 4px;
+}
+
+.searchPage__body {
+  margin-left: 0rem;
+}
+
+.searchPage__results {
+  max-width: 650px;
+  margin: 0px 0 100px 170px;
+}
+
+.searchPage__result {
+  margin: 25px 0 32px 0;
+  margin-left: 3px;
+}
+
+.searchPage__resultsCount {
+  color: #70757a;
+  margin: 13px 0 0 5px;
+  font-size: 14px;
+}
+
+.searchResult__imageIcon {
+  height: 20px;
+  width: 20px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+
+.searchResult__link {
+  color: #202124;
+  font-size: 14px;
+}
+
+.searchResult__title {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1a0dab;
+  margin-left: 1px;
+  cursor: pointer;
+}
+
+.searchResult__title:hover {
+  text-decoration: underline;
+}
+
+.searchResult__description {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4d5156;
+  letter-spacing: normal;
 }
 
 * {
@@ -296,7 +393,8 @@
           box-sizing: border-box;
   text-decoration: none;
   outline-width: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arimo", sans-serif;
+  font-weight: 400;
 }
 
 .cursor {

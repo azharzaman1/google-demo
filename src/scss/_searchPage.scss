@@ -1,13 +1,13 @@
 .searchPage__header {
   display: flex;
   flex-direction: column;
-  padding: 22px 15px 10px 15px;
+  padding: 22px 15px 0px 15px;
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: white;
   align-items: flex-start;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid rgb(233, 233, 233);
 }
 
 .searchPage__headerTop {
@@ -27,19 +27,20 @@
   }
 
   .lowerHeader__left {
-    margin-left: 205px;
+    margin-left: 150px;
   }
 
   .lowerHeader__right {
-    margin-left: 83.5px;
+    margin-left: 92.5px;
   }
 }
 
 .google__searchPage__logo {
-  height: 48.5px;
-  margin-right: 50px;
+  height: 31px;
+  margin-right: 43.25px;
   margin-left: 10px;
   object-fit: contain;
+  margin-top: 7px;
 }
 
 .searchPage__header__searchBar {
@@ -47,12 +48,13 @@
   align-items: center;
   border: 1px solid rgba(211, 211, 211, 0.966);
   height: 30px;
-  padding: 20px 20px;
+  padding: 21.5px 20px;
   width: 75vw;
+  z-index: 101;
   margin: 0 auto;
   border-radius: 999px;
-  max-width: 575px;
-  margin-top: 0.125rem;
+  max-width: 600px;
+  margin-top: -2px;
 
   &:hover {
     box-shadow: 0px 2px 7px -1.25px rgba($color: #000000, $alpha: 0.22);
@@ -60,9 +62,11 @@
 
   input {
     flex: 1;
-    font-size: medium;
+    font-size: 16px;
     border: none;
     padding: 10px 5px;
+    letter-spacing: normal;
+    z-index: 500;
   }
 }
 
@@ -72,12 +76,30 @@
   color: white;
 }
 
+.searchPage__headerTop__thirdSec {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 45.1rem;
+  margin-top: -1.8rem;
+
+  .searchBar__appsIcon {
+    margin-right: 20px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .searchPage__headerOption {
   display: flex;
   align-items: center;
   color: gray;
   margin-right: 25px;
-  font-size: 13px;
+  font-size: 13.75px;
+  padding-bottom: 13px;
 
   a {
     color: gray;
@@ -85,6 +107,75 @@
 
   .option__Icon {
     font-size: 17px;
-    margin-right: 4.5px;
+    margin-right: 4px;
   }
+}
+
+.firstOption {
+  padding-bottom: 8.75px;
+  border-bottom: 3px solid #1a73e8;
+  padding-right: 5px;
+  padding-left: 2px;
+}
+
+.extra__searchIcon {
+  margin-left: 2px solid rgb(177, 176, 176);
+  margin-left: 12px;
+  margin-top: 4px;
+}
+
+// Results Styling
+
+.searchPage__body {
+  margin-left: 0rem;
+}
+
+.searchPage__results {
+  max-width: 650px;
+  margin: 0px 0 100px 170px;
+}
+
+.searchPage__result {
+  margin: 25px 0 32px 0;
+  margin-left: 3px;
+}
+
+.searchPage__resultsCount {
+  color: #70757a;
+  margin: 13px 0 0 5px;
+  font-size: 14px;
+}
+
+.searchResult__imageIcon {
+  height: 20px;
+  width: 20px;
+  object-fit: contain;
+  margin-right: 10px;
+  margin-bottom: -3px;
+}
+
+.searchResult__link {
+  color: #202124;
+  font-size: 14px;
+}
+
+.searchResult__title {
+  margin-top: 6px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1a0dab;
+  margin-left: 1px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.searchResult__description {
+  margin-top: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  color: #4d5156;
+  letter-spacing: normal;
 }

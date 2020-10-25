@@ -9,7 +9,7 @@ import Mic from "./mic.svg";
 const SearchComp = ({
   hideButtons = false,
   isSearchPageBar,
-  noNeed__searchIcon,
+  isHomePage__bar,
 }) => {
   const [{}, dispatch] = useStateValue();
 
@@ -39,9 +39,8 @@ const SearchComp = ({
           isSearchPageBar && "searchPage__header__searchBar"
         }`}
       >
-        <SearchIcon
-          className={`input__Icon ${noNeed__searchIcon && "hide__searchIcon"}`}
-        />
+        {isHomePage__bar && <SearchIcon className="input__Icon" />}
+
         <input
           type="text"
           value={input}
@@ -50,6 +49,12 @@ const SearchComp = ({
           }}
         />
         <img className="mic__icon" src={Mic} />
+
+        {isSearchPageBar && (
+          <div className="searchPage__barExtraStuff">
+            <SearchIcon className="input__Icon extra__searchIcon" />
+          </div>
+        )}
       </div>
 
       {!hideButtons ? (

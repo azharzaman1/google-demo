@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useStateValue } from "../files/StateProvider";
-import useGoogleSearch from "../files/useGoogleSearch";
+// import useGoogleSearch from "../files/useGoogleSearch";
 import Response from "../files/response";
+import AppsList from "../components/AppsList";
 import SearchComp from "../components/SearchComp";
 import Logo from "../pages/logo.png";
 import { Link } from "react-router-dom";
@@ -13,13 +14,37 @@ import {
   Apps,
   Room,
   MoreVert,
+  DesktopWindowsOutlined,
 } from "@material-ui/icons";
 
 const SearchPage = () => {
   const [{ term }, dispatch] = useStateValue();
-  const { data } = useGoogleSearch(term);
+  const [open, setOpen] = useState(false);
+  const [show, handleShow] = useState(false);
+  // const { data } = useGoogleSearch(term);
 
-  // let data = Response;
+  useEffect(() => {
+    let appsListOpener = document.getElementById("searchPage__appsListOpener");
+    let openerBG = document.getElementById("appsList__openerBox");
+
+    appsListOpener.addEventListener("click", () => {
+      openerBG.classList.toggle("appsListIcon__hoverOnClick");
+    });
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 35) {
+        handleShow(true);
+      } else handleShow(false);
+
+      return () => {
+        window.removeEventListener("scroll");
+      };
+    });
+  }, []);
+
+  let data = Response;
 
   console.log(data);
 
@@ -27,20 +52,31 @@ const SearchPage = () => {
     <div className="searchPage__wrapper">
       <div className="searchPage__header">
         <div className="searchPage__headerTop">
-          <a href="http://localhost:3000/">
+          <Link to="/">
             <img
               className="google__searchPage__logo"
               src={Logo}
               alt="Google_Logo"
             />
-          </a>
+          </Link>
           <SearchComp hideButtons isSearchPageBar noNeed__searchIcon />
           <div className="searchPage__headerTop__thirdSec">
-            <Apps className="appsIcon searchBar__appsIcon" />
+            <div className="appsList__openerBox" id="appsList__openerBox">
+              <Apps
+                className="appsIcon searchBar__appsIcon"
+                id="searchPage__appsListOpener"
+                onClick={() => setOpen(!open)}
+              />
+            </div>
+
             <Avatar className="avatar" />
           </div>
         </div>
-        <div className="searchPage__headerLower">
+        <div
+          className={`searchPage__headerLower ${
+            show && "disAppear__lowerHeader"
+          }`}
+        >
           <div className="lowerHeader__left">
             <div className="searchPage__headerOption firstOption">
               <Search className="option__Icon" />
@@ -97,6 +133,11 @@ const SearchPage = () => {
               </div>
             ))}
           </div>
+        )}
+      </div>
+      <div>
+        {open && (
+          <AppsList appsList__container__className="searchPage__appsList" />
         )}
       </div>
     </div>

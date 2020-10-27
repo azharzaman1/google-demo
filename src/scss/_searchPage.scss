@@ -1,7 +1,8 @@
 .searchPage__header {
   display: flex;
   flex-direction: column;
-  padding: 22px 15px 0px 15px;
+  padding: 22px 22px 0px 15px;
+  padding: 14px 22px 0 15px;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -85,11 +86,13 @@
 
   .searchBar__appsIcon {
     margin-right: 20px;
+    margin-top: 7.5px;
   }
 
   .avatar {
     width: 32px;
     height: 32px;
+    background-color: rgb(143, 166, 188);
   }
 }
 
@@ -122,6 +125,10 @@
   margin-left: 2px solid rgb(177, 176, 176);
   margin-left: 12px;
   margin-top: 4px;
+}
+
+.disAppear__lowerHeader {
+  display: none;
 }
 
 // Results Styling

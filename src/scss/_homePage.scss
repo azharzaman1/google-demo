@@ -22,26 +22,21 @@
   }
 }
 
+.homePage__appsIcon {
+  margin-right: 20px;
+  margin-top: 7.5px;
+}
+
 .homePage__headerRight {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.appsIcon {
-  margin-right: 15px;
-  color: rgba($color: #000000, $alpha: 0.6);
-  font-size: 23px;
-  transition: color 0.2s;
-
-  &:hover {
-    color: #262626;
-  }
-}
-
 .homePage__headerRight > .avatar {
   width: 30px;
   height: 30px;
+  background-color: rgb(143, 166, 188);
 }
 
 .homePage__body {

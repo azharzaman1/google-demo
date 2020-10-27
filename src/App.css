@@ -36,6 +36,11 @@
   text-decoration: underline;
 }
 
+.homePage__appsIcon {
+  margin-right: 20px;
+  margin-top: 7.5px;
+}
+
 .homePage__headerRight {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,21 +53,10 @@
           justify-content: space-between;
 }
 
-.appsIcon {
-  margin-right: 15px;
-  color: rgba(0, 0, 0, 0.6);
-  font-size: 23px;
-  -webkit-transition: color 0.2s;
-  transition: color 0.2s;
-}
-
-.appsIcon:hover {
-  color: #262626;
-}
-
 .homePage__headerRight > .avatar {
   width: 30px;
   height: 30px;
+  background-color: #8fa6bc;
 }
 
 .homePage__body {
@@ -169,7 +163,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 22px 15px 0px 15px;
+  padding: 22px 22px 0px 15px;
+  padding: 14px 22px 0 15px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -289,11 +284,13 @@
 
 .searchPage__headerTop__thirdSec .searchBar__appsIcon {
   margin-right: 20px;
+  margin-top: 7.5px;
 }
 
 .searchPage__headerTop__thirdSec .avatar {
   width: 32px;
   height: 32px;
+  background-color: #8fa6bc;
 }
 
 .searchPage__headerOption {
@@ -329,6 +326,10 @@
   margin-left: 2px solid #b1b0b0;
   margin-left: 12px;
   margin-top: 4px;
+}
+
+.disAppear__lowerHeader {
+  display: none;
 }
 
 .searchPage__body {
@@ -384,6 +385,201 @@
   font-size: 14px;
   color: #4d5156;
   letter-spacing: normal;
+}
+
+.appsList__openerBox {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 7px;
+  -webkit-transition: background 0.1s;
+  transition: background 0.1s;
+}
+
+.appsList__openerBox:hover {
+  background-color: #eff0f0;
+}
+
+.appsListIcon__hoverOnClick {
+  background-color: #eff0f0;
+}
+
+.appsIcon {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 22px;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  border-radius: 50%;
+  margin-left: 7.25px;
+}
+
+.appsIcon:hover {
+  color: #262626;
+}
+
+.appsList__container {
+  min-width: 325px;
+  min-height: 457px;
+  background-color: white;
+  padding: 20px 10px 15px 10px;
+  border: 1px solid rgba(211, 211, 211, 0.747);
+  -webkit-box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: fixed;
+  top: 0rem;
+  right: 0rem;
+  z-index: 500;
+}
+
+.searchPage__appsList {
+  top: 5rem;
+  right: 1rem;
+}
+
+.homePage__appsList {
+  top: 4rem;
+  right: 1.5rem;
+}
+
+.appsRow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rowTwo,
+.rowThree,
+.rowFour {
+  margin-top: 1.75rem;
+}
+
+.App {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+  border-radius: 13px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+
+.App:hover {
+  background-color: rgba(157, 196, 255, 0.274);
+}
+
+.appsIcon__box {
+  width: 70px;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.appsIcon__box .appsList__avatar {
+  margin-left: 14px;
+  width: 39px;
+  height: 39px;
+  margin-top: 3.75px;
+}
+
+.avatarExtra__margin {
+  padding-top: 3px;
+}
+
+.appsList__image {
+  margin-left: 14px;
+  max-width: 42.75px;
+}
+
+.driveLogo {
+  min-width: 49px;
+  margin-left: 10px;
+}
+
+.playstoreLogo {
+  max-width: 39px;
+  margin-top: 1.5px;
+}
+
+.photosClass {
+  max-width: 46.5px;
+  margin-left: 11.65px;
+}
+
+.translateClass {
+  max-width: 49.5px;
+  margin-top: -3.25px;
+  margin-left: 10px;
+}
+
+.contactsClass {
+  max-width: 34px;
+  margin-top: 3.5px;
+  margin-left: 16.5px;
+}
+
+.calenderLogo {
+  max-width: 46px;
+  margin-left: 12px;
+  margin-top: -2px;
+}
+
+.appsList__title {
+  font-size: 14.25px;
+  margin: 2px auto 2px;
+  text-align: center;
+  color: #525252;
+}
+
+.accountClass {
+  margin: 0 0 2px 0;
+}
+
+.title {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+.account__title {
+  margin-left: -9px;
+  margin-top: -6px;
+}
+
+.google__title {
+  margin-left: -5.5px;
+  margin-top: 8px;
+}
+
+.playstore__title {
+  margin-left: -0.5px;
+  margin-top: 7px;
+}
+
+.youtube__title {
+  margin-top: 5px;
+  margin-left: -8.25px;
+}
+
+.gmail__title {
+  margin-top: 5px;
+  margin-left: -2.75px;
+}
+
+.maps__title {
+  margin-top: 5px;
+  margin-left: -3.75px;
 }
 
 * {

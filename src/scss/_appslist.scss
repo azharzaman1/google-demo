@@ -28,7 +28,7 @@
 
 .appsList__container {
   min-width: 325px;
-  min-height: 457px;
+  max-height: 450px;
   background-color: white;
   padding: 20px 10px 15px 10px;
   border: 1px solid rgba(211, 211, 211, 0.747);
@@ -38,6 +38,12 @@
   top: 0rem;
   right: 0rem;
   z-index: 500;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .searchPage__appsList {
@@ -59,7 +65,8 @@
 
 .rowTwo,
 .rowThree,
-.rowFour {
+.rowFour,
+.rowFive {
   margin-top: 1.75rem;
 }
 

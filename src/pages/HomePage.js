@@ -52,6 +52,13 @@ const HomePage = () => {
           <AppsList appsList__container__className="homePage__appsList" />
         )}
       </div>
+      <div className="copyright__section">
+        <h1>
+          @This <strong>Google Clone</strong> is Built by{" "}
+          <strong>Azhar Zaman</strong> with <strong>React</strong> to Showcase
+          Skills@
+        </h1>
+      </div>
     </div>
   );
 };

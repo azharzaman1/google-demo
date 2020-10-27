@@ -90,6 +90,21 @@ const AppsList = ({ appsList__container__className }) => {
           appRedirect__link="#"
         />
       </div>
+      {/* <div className="appsRow rowFive">
+        <App
+          title="Drive"
+          specificImageSrc={MapsLogo}
+          specificImageClass="mapsLogo"
+          appRedirect__link="#"
+        />
+        <App title="Meet" specificImageSrc={DuoLogo} appRedirect__link="#" />
+        <App
+          title="Calender"
+          specificImageSrc={CalenderLogo}
+          specificImageClass="calenderLogo"
+          appRedirect__link="#"
+        /> 
+      </div> */}
     </div>
   );
 };

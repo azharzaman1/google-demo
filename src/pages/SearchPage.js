@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useStateValue } from "../files/StateProvider";
 import useGoogleSearch from "../files/useGoogleSearch";
-import Response from "../files/response";
+// import Response from "../files/response";
 import AppsList from "../components/AppsList";
 import SearchComp from "../components/SearchComp";
 import Logo from "../pages/logo.png";
 import { Link } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
-import { Button } from "@material-ui/core";
+// import { Button } from "@material-ui/core";
 import {
   Search,
   Image,

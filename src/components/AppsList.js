@@ -1,16 +1,5 @@
 import React from "react";
 import App from "./AppsListApp";
-import GoogleLogo from "../logos/g.png";
-import YoutubeLogo from "../logos/yt.png";
-import DriveLogo from "../logos/d.png";
-import CalenderLogo from "../logos/cal.png";
-import ContactsLogo from "../logos/c.png";
-import PhotosLogo from "../logos/p.png";
-import DuoLogo from "../logos/duo.png";
-import TranslateLogo from "../logos/t.png";
-import GmailLogo from "../logos/gm.png";
-import MapsLogo from "../logos/m.png";
-import PlaystoreLogo from "../logos/play.png";
 
 const AppsList = ({ appsList__container__className }) => {
   return (
@@ -24,33 +13,33 @@ const AppsList = ({ appsList__container__className }) => {
         />
         <App
           title="Google"
-          specificImageSrc={GoogleLogo}
+          specificImageSrc="https://i.ibb.co/ckgWK7J/g.png"
           appRedirect__link="#"
         />
         <App
           title="Youtube"
-          specificImageSrc={YoutubeLogo}
+          specificImageSrc="https://i.ibb.co/q18kwVD/yt.png"
           appRedirect__link="#"
         />
       </div>
       <div className="appsRow rowTwo">
         <App
           title="Drive"
-          specificImageSrc={DriveLogo}
+          specificImageSrc="https://i.ibb.co/wzBwZDz/d.png"
           specificImageClass="driveLogo"
           appRedirect__link="#"
         />
 
         <App
           title="Gmail"
-          specificImageSrc={GmailLogo}
+          specificImageSrc="https://i.ibb.co/7jLkSZ5/gm.png"
           specificImageClass="gmailLogo"
           appRedirect__link="#"
         />
 
         <App
           title="Play"
-          specificImageSrc={PlaystoreLogo}
+          specificImageSrc="https://i.ibb.co/TPbZHRh/play.png"
           specificImageClass="playstoreLogo"
           appRedirect__link="#"
         />
@@ -58,19 +47,19 @@ const AppsList = ({ appsList__container__className }) => {
       <div className="appsRow rowThree">
         <App
           title="Photos"
-          specificImageSrc={PhotosLogo}
+          specificImageSrc="https://i.ibb.co/xmghVD1/p.png"
           specificImageClass="photosClass"
           appRedirect__link="#"
         />
         <App
           title="Translate"
-          specificImageSrc={TranslateLogo}
+          specificImageSrc="https://i.ibb.co/rwRfNgs/t.png"
           specificImageClass="translateClass"
           appRedirect__link="#"
         />
         <App
           title="Contacts"
-          specificImageSrc={ContactsLogo}
+          specificImageSrc="https://i.ibb.co/wQmsTbM/c.png"
           specificImageClass="contactsClass"
           appRedirect__link="#"
         />
@@ -78,33 +67,22 @@ const AppsList = ({ appsList__container__className }) => {
       <div className="appsRow rowFour">
         <App
           title="Drive"
-          specificImageSrc={MapsLogo}
+          specificImageSrc="https://i.ibb.co/4tjmjQ6/m.png"
           specificImageClass="mapsLogo"
           appRedirect__link="#"
         />
-        <App title="Meet" specificImageSrc={DuoLogo} appRedirect__link="#" />
+        <App
+          title="Meet"
+          specificImageSrc="https://i.ibb.co/f2tn2wN/duo.png"
+          appRedirect__link="#"
+        />
         <App
           title="Calender"
-          specificImageSrc={CalenderLogo}
+          specificImageSrc="https://i.ibb.co/1GJwt08/cal.png"
           specificImageClass="calenderLogo"
           appRedirect__link="#"
         />
       </div>
-      {/* <div className="appsRow rowFive">
-        <App
-          title="Drive"
-          specificImageSrc={MapsLogo}
-          specificImageClass="mapsLogo"
-          appRedirect__link="#"
-        />
-        <App title="Meet" specificImageSrc={DuoLogo} appRedirect__link="#" />
-        <App
-          title="Calender"
-          specificImageSrc={CalenderLogo}
-          specificImageClass="calenderLogo"
-          appRedirect__link="#"
-        /> 
-      </div> */}
     </div>
   );
 };

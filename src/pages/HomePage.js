@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AppsIcon from "@material-ui/icons/Apps";
 import { Avatar } from "@material-ui/core";
 import Logo from "./logo.png";
+import CopyrightSection from "../components/CopyrightSection";
 import AppsList from "../components/AppsList";
 import SearchComponent from "../components/SearchComp";
 
@@ -40,7 +41,14 @@ const HomePage = () => {
           <Avatar className="avatar" />
         </div>
       </div>
-      <div className="homePage__body">
+      <div
+        className="homePage__body"
+        onClick={() => {
+          let openerBG = document.getElementById("appsList__openerBox");
+          setOpen(false);
+          openerBG.classList.remove("appsListIcon__hoverOnClick");
+        }}
+      >
         <img src={Logo} />
         <SearchComponent
           searchInput__classBased__on__Location="homePage__header__searchBar"
@@ -52,13 +60,7 @@ const HomePage = () => {
           <AppsList appsList__container__className="homePage__appsList" />
         )}
       </div>
-      <div className="copyright__section">
-        <h1>
-          @This <strong>Google Clone</strong> is Built by{" "}
-          <strong>Azhar Zaman</strong> with <strong>React</strong> to Showcase
-          Skills@
-        </h1>
-      </div>
+      <CopyrightSection />
     </div>
   );
 };

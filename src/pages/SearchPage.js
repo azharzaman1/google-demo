@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useStateValue } from "../files/StateProvider";
 import useGoogleSearch from "../files/useGoogleSearch";
-// import Response from "../files/response";
+import Response from "../files/response";
 import AppsList from "../components/AppsList";
 import SearchComp from "../components/SearchComp";
+import CopyrightSection from "../components/CopyrightSection";
 import Logo from "../pages/logo.png";
 import { Link } from "react-router-dom";
 import { Avatar } from "@material-ui/core";
-// import { Button } from "@material-ui/core";
 import {
   Search,
   Image,
@@ -21,7 +21,7 @@ const SearchPage = () => {
   const [{ term }, dispatch] = useStateValue();
   const [open, setOpen] = useState(false);
   const [show, handleShow] = useState(false);
-  const { data } = useGoogleSearch(term);
+  const { data } = useGoogleSearch(term); // Real Time API call Response.
 
   useEffect(() => {
     let appsListOpener = document.getElementById("searchPage__appsListOpener");
@@ -44,7 +44,7 @@ const SearchPage = () => {
     });
   }, []);
 
-  // let data = Response;
+  // let data = Response; // Default Saved Response.
 
   console.log(data);
 
@@ -78,6 +78,11 @@ const SearchPage = () => {
           className={`searchPage__headerLower ${
             show && "disAppear__lowerHeader"
           }`}
+          onClick={() => {
+            let openerBG = document.getElementById("appsList__openerBox");
+            setOpen(false);
+            openerBG.classList.remove("appsListIcon__hoverOnClick");
+          }}
         >
           <div className="lowerHeader__left">
             <div className="searchPage__headerOption firstOption">
@@ -111,7 +116,14 @@ const SearchPage = () => {
           </div>
         </div>
       </div>
-      <div className="searchPage__body">
+      <div
+        className="searchPage__body"
+        onClick={() => {
+          let openerBG = document.getElementById("appsList__openerBox");
+          setOpen(false);
+          openerBG.classList.remove("appsListIcon__hoverOnClick");
+        }}
+      >
         {term && (
           <div className="searchPage__results">
             <p className="searchPage__resultsCount">
@@ -144,13 +156,7 @@ const SearchPage = () => {
           <AppsList appsList__container__className="searchPage__appsList" />
         )}
       </div>
-      <div className="copyright__section">
-        <h1>
-          @This <strong>Google Clone</strong> is Built by{" "}
-          <strong>Azhar Zaman</strong> with <strong>React</strong> to Showcase
-          Skills@
-        </h1>
-      </div>
+      <CopyrightSection />
     </div>
   );
 };

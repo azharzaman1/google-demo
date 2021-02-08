@@ -60,7 +60,7 @@ const HomePage = () => {
           <AppsList appsList__container__className="homePage__appsList" />
         )}
       </div>
-      <CopyrightSection />
+     // <CopyrightSection />
     </div>
   );
 };

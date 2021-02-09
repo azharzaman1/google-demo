@@ -156,7 +156,7 @@ const SearchPage = () => {
           <AppsList appsList__container__className="searchPage__appsList" />
         )}
       </div>
-     // <CopyrightSection />
+      {/* <CopyrightSection /> */}
     </div>
   );
 };

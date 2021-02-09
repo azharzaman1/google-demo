@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API_KEY from "./api_key";
+import { API_KEY } from "./api_key";
 import CONTEXT_KEY from "./context_key";
 
 const useGoogleSearch = (term) => {

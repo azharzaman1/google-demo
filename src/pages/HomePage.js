@@ -49,7 +49,7 @@ const HomePage = () => {
           openerBG.classList.remove("appsListIcon__hoverOnClick");
         }}
       >
-        <img src={Logo} />
+        <img className="homePage__logo" src={Logo} />
         <SearchComponent
           searchInput__classBased__on__Location="homePage__header__searchBar"
           isHomePage__bar
@@ -60,7 +60,7 @@ const HomePage = () => {
           <AppsList appsList__container__className="homePage__appsList" />
         )}
       </div>
-     // <CopyrightSection />
+      {/* <CopyrightSection /> */}
     </div>
   );
 };

@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import RootApp from "./App";
 import reducer, { initialState } from "./files/reducer";
 import { StateProvider } from "./files/StateProvider";
-import * as serviceWorker from "./serviceWorker";
 
 let RootDirectory = document.getElementById("Root");
 
@@ -15,5 +14,3 @@ ReactDOM.render(
   </React.StrictMode>,
   RootDirectory
 );
-
-serviceWorker.register();
